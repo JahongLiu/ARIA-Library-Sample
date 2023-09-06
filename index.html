@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMBINE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Using <nav> helps screen readers and search engines understand the purpose of the content inside -->
+    <nav>
+      <!-- This is a "skip-link", a basic accessibility feature. 
+        When users assistive technologies(like screen readers) access the page, 
+        they'll be presented with this link first -->
+      <!-- Activating this link will bypass the navigation and take the user directly to the main content of the page. -->
+      <a class="skip-link" href="#main">Skip to Main Content</a>
+      <div class="content">
+        <ul>
+          <li><a href="#home" aria-current="true">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main id="main" class="content">
+      <h1>The Minkara Combine Lab Newsletter</h1>
+      <div>
+        <section>
+          <h2>Sign-up Form</h2>
+          <form action="">
+            <div class="input-container">
+              <label for="name" aria-describedby="name-description">Name</label>
+              <input type="text" id="name" required />
+              <p id="name-description">First and Last Name</p>
+            </div>
+
+            <div class="input-container">
+              <label for="email" aria-describedby="email-description"
+                >Email</label
+              >
+              <input type="email" id="email" required />
+              <p id="email-description">Enter a Valid Email Address</p>
+            </div>
+
+            <label>
+              <input type="checkbox" />
+              I accept all the <a href="#terms">terms and conditions</a>
+            </label>
+
+            <input type="submit" value="Sign Up" />
+          </form>
+        </section>
+        <section id="terms">
+          <button
+            id="terms-button"
+            aria-expanded="false"
+            aria-controls="terms-content"
+          >
+            <h2>Terms and Conditions</h2>
+          </button>
+          <div id="terms-content">
+            <p>
+              All materials published on or in the Combine Lab News Services are
+              protected by copyright laws, and may not be reproduced,
+              republished, distributed, transmitted, resold, displayed,
+              broadcast, or otherwise exploited in any manner without the
+              express written permission of either Combine Lab News or, in the
+              case of content licensed by Combine Lab News from third parties,
+              the entity that is credited as the copyright holder of such
+              licensed content.
+            </p>
+            <!-- truncated for brevity -->
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <h2>About The Newsletter</h2>
+        <figure>
+          <img
+            class="banner"
+            src="/Users/jahong/Desktop/Internships/TAA/ATT/news image.png"
+            alt="A News banner image with Mona Minkara text"
+          />
+          <figcaption>
+            Photo by
+            <a href="https://monaminkara.com">monaminkara.com</a>
+          </figcaption>
+        </figure>
+        <p>
+          The Combine Lab Newsletter, led by Dr. Mona Minkara, offers insights
+          into groundbreaking research, innovative scientific approaches, and
+          community outreach efforts. Stay updated with the latest from our lab
+          and delve into the world of interdisciplinary scientific exploration
+          with us.
+        </p>
+        <!-- truncated for brevity -->
+      </aside>
+    </main>
+
+    <footer>
+      <div class="content">
+        <p>
+          &copy; 2023
+          <a href="http://minkaracombinelab.com/#1">Minkara Combine Lab</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
